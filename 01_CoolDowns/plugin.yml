@@ -1,2 +1,4 @@
 name: CoolDowns
 main: org.cherrygods.main.CoolDownsClass
+version: 1.0
+author: CherryGods
