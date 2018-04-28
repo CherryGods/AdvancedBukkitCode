@@ -1,0 +1,4 @@
+name: MySQLTest
+main: org.cherrygods.main.MySQLTestClass
+version: 1.0
+author: CherryGods
