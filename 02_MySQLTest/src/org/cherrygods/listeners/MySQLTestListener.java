@@ -35,7 +35,7 @@ public class MySQLTestListener implements Listener {
 
     /**
      * 查询玩家是否存在
-     * @param uuid
+   A  * @param uuid
      * @return
      */
     public boolean playerExists(UUID uuid){
