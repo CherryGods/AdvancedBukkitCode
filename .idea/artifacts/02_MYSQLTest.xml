@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="02_MYSQLTest">
-    <output-path>D:/MineServer/Servers/1.12.2/plugins</output-path>
-    <root id="archive" name="02_MYSQLTest.jar" />
-  </artifact>
-</component>
