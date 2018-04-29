@@ -38,11 +38,11 @@ public class MySQLTestListener implements Listener {
      * @param uuid
      * @return
      */
-    public boolean playeExists(UUID uuid){
+    public boolean playerExists(UUID uuid){
         try {
             //sql语句
             PreparedStatement ps = plugin.getConnection()
-                    .prepareStatement("SELECT * FROM "+plugin.table+"WHERE UUID=?");
+                    .prepareStatement("SELECT * FROM "+plugin.table+" WHERE UUID=?");
             //把条件传进去
             ps.setString(1,uuid.toString());
             //结果集
@@ -70,10 +70,10 @@ public class MySQLTestListener implements Listener {
     public void insertPlayer(final UUID UUID,Player player){
         try {
             PreparedStatement ps = plugin.getConnection()
-                    .prepareStatement("SELECT * FROM"+plugin.table+" WHERE UUID = ?");
+                    .prepareStatement("SELECT * FROM "+plugin.table+" WHERE UUID = ?");
             ps.setString(1,UUID.toString());
             ResultSet rs = ps.executeQuery();
-            if(playeExists(UUID) != true){
+            if(playerExists(UUID) != true){
                 PreparedStatement insert = plugin.getConnection()
                         .prepareStatement("INSERT INTO "+plugin.table+" (UUID,NAME,MONEY) VALUES (?,?,?)");
                 insert.setString(1,UUID.toString());
