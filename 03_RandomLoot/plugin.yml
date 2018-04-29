@@ -1,0 +1,4 @@
+name: RandomLoot
+main: org.cherrygods.main.RandomLootClass
+version: 1.0
+author: CherryGods
