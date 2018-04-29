@@ -37,6 +37,7 @@ public class MySQLTestClass extends JavaPlugin {
     public void onEnable() {
         loadConfig();
         mysqlSetup();
+        getServer().getPluginManager().registerEvents(new MySQLTestListener(),this);
         getServer().getConsoleSender().sendMessage("\n\n"+ChatColor.GREEN+getName()+" >> "
                 +ChatColor.AQUA+"has been Enable!\n");
         super.onEnable();
