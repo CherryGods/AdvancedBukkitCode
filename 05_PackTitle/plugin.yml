@@ -1,0 +1,3 @@
+name: PacketTitle
+main: org.cherrygods.main.PackTitleMain
+version: 1.0

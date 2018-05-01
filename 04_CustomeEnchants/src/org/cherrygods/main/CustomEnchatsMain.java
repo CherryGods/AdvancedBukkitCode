@@ -10,7 +10,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.cherrygods.listeners.CustomEnchatsListener;
+import org.cherrygods.listeners.CustomEnchatListener;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -21,7 +21,7 @@ import java.util.HashMap;
  * @since  2018-4-30 23:20:10
  */
 public class CustomEnchatsMain extends JavaPlugin implements Listener {
-    private CustomEnchatsListener ench = new CustomEnchatsListener(101);
+    private CustomEnchatListener ench = new CustomEnchatListener(101);
     @Override
     public void onEnable() {
         LoadEnchantments();
@@ -61,11 +61,12 @@ public class CustomEnchatsMain extends JavaPlugin implements Listener {
 
         ItemStack item = new ItemStack(Material.DIAMOND_AXE);
         ItemMeta meta = item.getItemMeta();
-        ArrayList<String> lore = new ArrayList<String>();
+        ArrayList<String> lore = new ArrayList<>();
         lore.add(ChatColor.GRAY+ench.getName()+" I");
         meta.setDisplayName(ChatColor.GOLD + "CherryGods Axe");
         meta.setLore(lore);
         item.setItemMeta(meta);
+        item.addUnsafeEnchantment(ench, 1);
         player.getInventory().addItem(item);
     }
     private void LoadEnchantments() {
