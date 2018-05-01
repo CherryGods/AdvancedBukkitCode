@@ -44,6 +44,12 @@ public class CustomEnchatsMain extends JavaPlugin implements Listener {
 
             HashMap<Integer,Enchantment> byId = (HashMap<Integer, Enchantment>) byIdField.get(null);
             HashMap<Integer,Enchantment> byName = (HashMap<Integer, Enchantment>) byNameField.get(null);
+            if(byId.containsKey(ench.getId())){
+                byId.remove(ench.getId());
+            }
+            if(byName.containsKey(ench.getName())){
+                byName.remove(ench.getName());
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
