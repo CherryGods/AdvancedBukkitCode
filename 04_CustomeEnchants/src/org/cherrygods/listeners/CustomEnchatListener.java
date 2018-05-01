@@ -12,7 +12,7 @@ import org.bukkit.inventory.ItemStack;
  * @author CherryGods
  * @since 2018-4-30 23:22:15
  */
-public class CustomEnchatsListener extends Enchantment implements Listener {
+public class CustomEnchatListener extends Enchantment implements Listener {
     @EventHandler
     public void onHit(EntityDamageByEntityEvent event){
 //        判断受到伤害的实体是否为Player
@@ -27,7 +27,7 @@ public class CustomEnchatsListener extends Enchantment implements Listener {
             }
         }
     }
-    public CustomEnchatsListener(int id) {
+    public CustomEnchatListener(int id) {
         super(id);
     }
 
