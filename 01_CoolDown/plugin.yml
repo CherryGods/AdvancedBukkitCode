@@ -1,0 +1,4 @@
+name: CoolDown
+main: org.cherrygods.main.MainCoolDown
+version: 1.0
+description: 冷却时间插件
