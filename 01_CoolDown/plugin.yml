@@ -1,0 +1,4 @@
+name: CoolDown
+main: org.cherrygods.main.CoolDown
+version: 1.0
+author: CherryGods
